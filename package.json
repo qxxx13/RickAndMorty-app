@@ -1,5 +1,5 @@
 {
-    "name": "spacex-api-app",
+    "name": "rick-and-morty-app",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
@@ -49,6 +49,7 @@
         "@mui/icons-material": "5.11.16",
         "@mui/material": "5.12.3",
         "graphql": "16.6.0",
+        "react-router-dom": "6.11.1",
         "react-tsparticles": "2.9.3",
         "tsparticles": "2.9.3",
         "typescript": "5.0.4"
