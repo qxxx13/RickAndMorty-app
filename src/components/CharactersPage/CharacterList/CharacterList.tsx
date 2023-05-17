@@ -10,15 +10,19 @@ import { SearchField } from "../SearchField/SearchField";
 import { CharactersModel } from "../../../models/CharactersModel";
 import { AppContext } from "../../../context/AppContext";
 import { ActionType } from "../../../context/Actions";
+import { GET_SEARCH_VALUE } from "../../../apollo/variables";
+import { GetSearchValueModel } from "../../../models/VariablesModel";
 
 export const CharacterList: React.FC = () => {
     const { state, dispatch } = useContext(AppContext);
+
+    const { data: searchValueData } = useQuery<GetSearchValueModel>(GET_SEARCH_VALUE);
 
     const { loading, data } = useQuery<CharactersModel>(GET_CHARACTERS, {
         variables: {
             page: state.currentPage,
             filter: {
-                name: state.searchValue,
+                name: searchValueData?.searchValue,
             },
         },
     });
