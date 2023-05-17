@@ -1,5 +1,5 @@
 import { InMemoryCache } from "@apollo/client";
-import { searchValue } from "./variables";
+import { currentPage, searchValue, totalPages } from "./variables";
 
 const cache = new InMemoryCache({
     typePolicies: {
@@ -8,6 +8,16 @@ const cache = new InMemoryCache({
                 searchValue: {
                     read() {
                         return searchValue();
+                    },
+                },
+                currentPage: {
+                    read() {
+                        return currentPage();
+                    },
+                },
+                totalPages: {
+                    read() {
+                        return totalPages();
                     },
                 },
             },

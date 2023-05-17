@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import { IconButton, InputAdornment, TextField } from "@mui/material";
-import { searchValue } from "../../../apollo/variables";
+import { currentPage, searchValue } from "../../../apollo/variables";
 
 export const SearchField: React.FC = () => {
     const [currentSearchValue, setCurrentSearchValue] = useState("");
@@ -12,6 +12,7 @@ export const SearchField: React.FC = () => {
 
     const onSearch = useCallback(() => {
         searchValue(currentSearchValue);
+        currentPage(1);
     }, [currentSearchValue]);
 
     const onKeyDown = (key: React.KeyboardEvent<HTMLDivElement>) => {
