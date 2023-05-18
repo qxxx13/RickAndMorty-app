@@ -5,4 +5,8 @@ export type CharacterItemModel = {
     gender: string;
     status: string;
     species: string;
+    episode: {
+        id: string;
+        name: string;
+    }[];
 };

@@ -14,6 +14,10 @@ export const GET_CHARACTERS = gql`
                 gender
                 status
                 species
+                episode {
+                    id
+                    name
+                }
             }
         }
     }
