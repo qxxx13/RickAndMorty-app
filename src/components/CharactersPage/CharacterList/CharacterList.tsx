@@ -1,5 +1,4 @@
-import React from "react";
-import { useMemo } from "react";
+import React, { useMemo } from "react";
 import { CircularProgress, Stack } from "@mui/material";
 
 import { CharacterListItem } from "./CharacterListItem/CharacterListItem";
@@ -19,5 +18,5 @@ export const CharacterList: React.FC<CharacterListProps> = ({ data, loading }) =
             ));
     }, [data, loading]);
 
-    return <Stack alignItems="center">{!loading ? CharacterList : <CircularProgress />}</Stack>;
+    return <Stack alignItems="center">{!loading ? CharacterList : <CircularProgress sx={{ mt: 2 }} />}</Stack>;
 };
