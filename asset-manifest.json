@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/RickAndMorty-app/static/css/main.af3e7f37.css",
+    "main.js": "/RickAndMorty-app/static/js/main.f816338b.js",
+    "index.html": "/RickAndMorty-app/index.html",
+    "main.af3e7f37.css.map": "/RickAndMorty-app/static/css/main.af3e7f37.css.map",
+    "main.f816338b.js.map": "/RickAndMorty-app/static/js/main.f816338b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.af3e7f37.css",
+    "static/js/main.f816338b.js"
+  ]
+}
